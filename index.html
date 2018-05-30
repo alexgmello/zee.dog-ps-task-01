@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Task 01</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/lightbox.min.css">
+
+
 </head>
 <body>
 <!-- HEADER -->
     <header>
         <section class="header-top">
             <p>Fale com a gente - 3003-0494</p>
-            <h3>Frete grátis para todo o Brasil em compras acima de R$119,00</h3>
+            <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
             <div class="profile-cart">
                 <p>Perfil</p>
                 <p>Carrinho <span class="cart-qnt">0</span></p>
@@ -20,27 +24,27 @@
         </section>
 
         <nav class="main-menu container">
-                <p class="drop-down-arrow">Cachorros</p>
-                <p class="drop-down-arrow">Gatos</p>
-                <p class="drop-down-arrow">Pessoas</p>
-                <p><img src="src/img/zeedog-logo.png" alt="zee dog logo"></p>
-                <p>Lookbook</p>
-                <p>Quem Somos</p>
-                <p class="drop-down-arrow">Onde Encontrar</p>
+            <p class="drop-down-arrow">Cachorros</p>
+            <p class="drop-down-arrow">Gatos</p>
+            <p class="drop-down-arrow">Pessoas</p>
+            <p><img src="src/img/zeedog-logo.png" alt="zee dog logo"></p>
+            <p>Lookbook</p>
+            <p>Quem Somos</p>
+            <p class="drop-down-arrow">Onde Encontrar</p>
         </nav>
 
         <div id="search-bar" class="container">
-                <input type="text" placeholder="O que você está procurando?">
+            <input type="text" placeholder="O que você está procurando?">
             <p><img src="src/icon/search.svg" alt="search icon"></p>
         </div>
     </header>
-
+<!-- ABOUT -->
     <div id="about" class="container">
         <h2>Ivan e Bono surfdog</h2>
         <img src="src/img/about-ivan_e_bono.jpg" alt="ivan e bono surfando">
         <p>Na verdade antes de começarmos a surfar, eu comecei a remar com o Bono em Búzios. Eu havia comprado uma prancha de SUP (Stand Up Paddle) pra aprender a remar com o Bono, como um bom labrador, veio nadando atrás. Coloquei ele em cima da prancha e percebi que dava pra remar com ele junto. A primeira onda veio alguns meses depois na praia do Rosa em Florianópolis. Eu estava remando com o Bono em direção ao Rosa Norte e percebi que colado as pedras havia umas "marolinhas" quebrando. Consegui entrar em uma delas e fui reto em direção a praia. Me senti assim, num estado de extrema euforia. Não é que dava pra surfar com o Bono?</p>
     </div>
-
+<!-- BEST-OF -->
     <div id="best-of">
         <section class="container">
             <div class="top-3">
@@ -77,6 +81,65 @@
             </div>
         </section>
     </div>
+<!-- GALLERY -->
+    <div id="gallery" class="container">
+        <h2>@Bonosurfdog</h2>
+        <section class="galeria">
+            <a href="src/img/galeria-img01.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img01-thumb.jpg" alt="imagem 01" class="gallery-img">
+                <img src="src/img/galeria-img01-thumb-sm.jpg" alt="imagem 01" class="gallery-sm">
+            </a>
 
+            <a href="src/img/galeria-img02.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img02-thumb.jpg" alt="imagem 02" class="gallery-img">
+                <img src="src/img/galeria-img02-thumb-sm.jpg" alt="imagem 02" class="gallery-sm">
+            </a>
+
+            <a href="src/img/galeria-img03.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img03-thumb.jpg" alt="imagem 03" class="gallery-img">
+                <img src="src/img/galeria-img03-thumb-sm.jpg" alt="imagem 03" class="gallery-sm">
+            </a>
+
+            <a href="src/img/galeria-img04.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img04-thumb.jpg" alt="imagem 04" class="gallery-img">
+                <img src="src/img/galeria-img04-thumb-sm.jpg" alt="imagem 04" class="gallery-sm">
+            </a>
+
+            <a href="src/img/galeria-img05.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img05-thumb.jpg" alt="imagem 05" class="gallery-img">
+                <img src="src/img/galeria-img05-thumb-sm.jpg" alt="imagem 05" class="gallery-sm">
+            </a>
+
+            <a href="src/img/galeria-img06.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img06-thumb.jpg" alt="imagem 06" class="gallery-img">
+                <img src="src/img/galeria-img06-thumb-sm.jpg" alt="imagem 06" class="gallery-sm">
+            </a>
+
+            <a href="src/img/galeria-img07.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img07-thumb.jpg" alt="imagem 07" class="gallery-img">
+                <img src="src/img/galeria-img07-thumb-sm.jpg" alt="imagem 07" class="gallery-sm">
+            </a>
+
+            <a href="src/img/galeria-img08.png" data-lightbox="surfdog">
+                <img src="src/img/galeria-img08-thumb.jpg" alt="imagem 08" class="gallery-img">
+                <img src="src/img/galeria-img08-thumb-sm.jpg" alt="imagem 08" class="gallery-sm">
+            </a>
+        </section>
+    </div>
+<!--
+    Lightbox created by: Lokesh Dhakar
+    Homepage: http://lokeshdhakar.com/projects/lightbox2/
+    Github: https://github.com/lokesh/lightbox2/
+    MIT License: https://raw.githubusercontent.com/lokesh/lightbox2/master/LICENSE
+-->
+<script src="src/js/lightbox-plus-jquery.min.js"></script>
+<script>
+    lightbox.option({
+        'resizeDuration': 500,
+        'fadeDuration': 300,
+        'alwaysShowNavOnTouchDevices': true,
+        'wrapAround': true
+    })
+</script>
 </body>
 </html>

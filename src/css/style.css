@@ -18,16 +18,25 @@ body {
     margin: 0 auto;
 }
 
+img {vertical-align: middle;}
+
 header, #about {margin-bottom: var(--marBotBig);}
 
 .container {
-    width: 1200px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 a {text-decoration: none;}
-h2 {font-size: 1.5rem;}
+p {font-size: .8rem}
+h1 {font-size: 1.1rem;}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+h1, h2, h3, h4 {text-transform: uppercase;}
 
 /************************************/
 /************* HEADER ***************/
@@ -39,14 +48,19 @@ h2 {font-size: 1.5rem;}
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 3rem;
     margin-bottom: var(--marBot);
     background-color: var(--lightGray);
     text-transform: uppercase;
-    align-items: center;
+    align-items: baseline;
     font-weight: bold;
     color: var(--darkGray);
+}
+
+.header-top p:first-child, .header-top h1 {
+    padding-right: .5rem;
 }
 
 .profile-cart {
@@ -55,7 +69,7 @@ h2 {font-size: 1.5rem;}
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .profile-cart p:first-child {
@@ -68,6 +82,7 @@ h2 {font-size: 1.5rem;}
     padding: 0 7px;
     width: 1rem;
     filter: brightness(.3);
+    vertical-align: middle.
 }
 
 .profile-cart p:last-child::after {
@@ -76,13 +91,15 @@ h2 {font-size: 1.5rem;}
     padding: 0 7px;
     width: 1rem;
     filter: brightness(.3);
+    vertical-align: middle;
 }
 
 .cart-qnt {
     background-color: #37c0a8;
-    padding: 3px 8px;
+    padding: 4px 8px;
     border-radius: 50%;
     color: #f4f4f4;
+    vertical-align: middle;
 }
 
 /************** MAIN MENU ****************/
@@ -93,8 +110,10 @@ h2 {font-size: 1.5rem;}
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-evenly;
     margin: 0 auto;
     font-size: 1rem;
     font-weight: bold;
@@ -142,8 +161,7 @@ input {
     background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
-    width: 500px;
-    max-width: 500px;
+    width: 100%;
     border: none;
     outline: none;
 }
@@ -177,6 +195,8 @@ input {
     font-size: 1.1rem;
 }
 
+#about img {max-width: 100%;}
+
 /************************************/
 /************* BEST-OF **************/
 /************************************/
@@ -204,6 +224,7 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .espiar::before {
@@ -236,4 +257,58 @@ input {
 
 .info-product a>h4 {
     color: var(--midGray);
+}
+
+/************************************/
+/************* GALLERY **************/
+/************************************/
+
+#gallery {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gallery h2 {margin-bottom: var(--marBot);}
+.galeria {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--marBotBig);
+}
+
+.gallery-img {display: inline-block;}
+.gallery-sm {display: none;}
+
+/************************************/
+/*********** MEDIA QUERY ************/
+/************************************/
+
+@media screen and (max-width: 920px) {
+    /* .header-top h1 {
+        padding: 0;
+    } */
+}
+
+@media screen and (max-width:768px) {
+    .gallery-img {display: none;}
+    .gallery-sm {display: inline-block;}
+}
+
+@media and screen (max-width:680px){
+
+}
+
+@media screen and (max-width:414px) {
+    .gallery-img {display: inline-block;}
+    .gallery-sm {display: none;}
 }
