@@ -8,13 +8,12 @@
 
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/lightbox.min.css">
-
-
-</head>
+ </head>
 <body>
 <!-- HEADER -->
     <header>
-        <section class="header-top">
+       <div id="desktop-header">
+           <section class="header-top">
             <p>Fale com a gente - 3003-0494</p>
             <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
             <div class="profile-cart">
@@ -23,7 +22,7 @@
             </div>
         </section>
 
-        <nav class="main-menu container">
+         <nav class="main-menu container">
             <p class="drop-down-arrow">Cachorros</p>
             <p class="drop-down-arrow">Gatos</p>
             <p class="drop-down-arrow">Pessoas</p>
@@ -36,6 +35,43 @@
         <div id="search-bar" class="container">
             <input type="text" placeholder="O que você está procurando?">
             <p><img src="src/icon/search.svg" alt="search icon"></p>
+        </div>
+        </div>
+
+        <!-- MOBILE -->
+        <div id="mobile-header">
+            <nav id="mobile-menu" class="container">
+            <div class="mobile-nav">
+                <div class="profile-cart">
+                    <p><span class="cart-qnt">0</span></p>
+                </div>
+                <p>
+                <img src="src/img/zeedog-logo.png" alt="zee dog logo" class="mobile-logo">
+                </p>
+                <div>
+                    <button onclick="mobileMenu()" id="menu-btn"></button>
+                    <ul class="menu-list close">
+                        <li>Cachorros</li>
+                        <li>Gatos</li>
+                        <li>Pessoas</li>
+                        <li>Lookbook</li>
+                        <li>Quem Somos</li>
+                        <li>Onde Encontrar</li>
+                        <li>Meu Perfil</li>
+                        <li>Meu Carrinho</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+            <div class="destaque">
+                <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
+            </div>
+
+            <div id="search-bar" class="container">
+                <input type="text" placeholder="O que você está procurando?">
+                <p><img src="src/icon/search.svg" alt="search icon"></p>
+            </div>
         </div>
     </header>
 <!-- ABOUT -->
@@ -126,6 +162,12 @@
             </a>
         </section>
     </div>
+<script>
+    function mobileMenu() {
+        document.getElementById("menu-btn").classList("open");
+    }
+
+</script>
 <!--
     Lightbox created by: Lokesh Dhakar
     Homepage: http://lokeshdhakar.com/projects/lightbox2/

@@ -27,6 +27,12 @@ header, #about {margin-bottom: var(--marBotBig);}
     margin: 0 auto;
 }
 
+#mobile-header {display: none;}
+
+li {
+    list-style: none;
+}
+
 a {text-decoration: none;}
 p {font-size: .8rem}
 h1 {font-size: 1.1rem;}
@@ -139,6 +145,55 @@ h1, h2, h3, h4 {text-transform: uppercase;}
     filter: brightness(.5);
     position: relative;
     top: 7px;
+}
+
+#mobile-menu {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+.mobile-nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-logo {
+    width: 3.5rem;
+    height: auto;
+}
+
+#menu-btn::after {
+    content: url(../icon/bars.svg);
+    display: inline-block;
+    width: 1rem;
+    padding: 1rem;
+}
+
+
+.close {display: none;}
+.open {display: inline-block;}
+
+.menu-list {display: none;}
+
+.destaque {
+    text-align: center;
+    background-color: var(--lightGray);
+    padding: 1rem;
+    margin-bottom: var(--marBot);
 }
 
 /************ SEARCH BAR ***************/
@@ -293,22 +348,25 @@ input {
 /*********** MEDIA QUERY ************/
 /************************************/
 
-@media screen and (max-width: 920px) {
-    /* .header-top h1 {
-        padding: 0;
-    } */
-}
-
 @media screen and (max-width:768px) {
     .gallery-img {display: none;}
     .gallery-sm {display: inline-block;}
 }
 
-@media and screen (max-width:680px){
+@media screen and (max-width:720px) {
+    #desktop-header {display: none;}
+    #mobile-header {
+        display: inline-block;
+        width: 100%;
+    }
+}
 
+@media screen and (max-width:639px) {
+    .top-itens {flex-direction: column;}
 }
 
 @media screen and (max-width:414px) {
     .gallery-img {display: inline-block;}
     .gallery-sm {display: none;}
+    .mobile-logo {width: 2rem;}
 }
