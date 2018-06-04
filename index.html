@@ -17,19 +17,19 @@
             <p>Fale com a gente - 3003-0494</p>
             <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
             <div class="profile-cart">
-                <p>Perfil</p>
-                <p>Carrinho <span class="cart-qnt">0</span></p>
+                <p><a href="#">Perfil</a></p>
+                <p><a href="#">Carrinho <span class="cart-qnt">10</span></a></p>
             </div>
         </section>
 
          <nav class="main-menu container">
-            <p class="drop-down-arrow">Cachorros</p>
-            <p class="drop-down-arrow">Gatos</p>
-            <p class="drop-down-arrow">Pessoas</p>
-            <p><img src="src/img/zeedog-logo.png" alt="zee dog logo"></p>
-            <p>Lookbook</p>
-            <p>Quem Somos</p>
-            <p class="drop-down-arrow">Onde Encontrar</p>
+            <p class="drop-down-arrow"><a href="#">Cachorros</a></p>
+            <p class="drop-down-arrow"><a href="#">Gatos</a></p>
+            <p class="drop-down-arrow"><a href="#">Pessoas</a></p>
+            <p><a href="index.html"><img src="src/img/zeedog-logo.png" alt="zee dog logo"></a></p>
+            <p><a href="#">Lookbook</a></p>
+            <p><a href="#">Quem Somos</a></p>
+            <p class="drop-down-arrow"><a href="#">Onde Encontrar</a></p>
         </nav>
 
         <div id="search-bar" class="container">
@@ -38,32 +38,27 @@
         </div>
         </div>
 
-        <!-- MOBILE -->
+        <!-- MOBILE INICIO -->
         <div id="mobile-header">
             <nav id="mobile-menu" class="container">
             <div class="mobile-nav">
                 <div class="profile-cart">
-                    <p><span class="cart-qnt">0</span></p>
+                    <p><span class="cart-qnt">10</span></p>
                 </div>
-                <p>
-                <img src="src/img/zeedog-logo.png" alt="zee dog logo" class="mobile-logo">
-                </p>
-                <div>
-                    <button onclick="mobileMenu()" id="menu-btn"></button>
-                    <ul class="menu-list close">
-                        <li>Cachorros</li>
-                        <li>Gatos</li>
-                        <li>Pessoas</li>
-                        <li>Lookbook</li>
-                        <li>Quem Somos</li>
-                        <li>Onde Encontrar</li>
-                        <li>Meu Perfil</li>
-                        <li>Meu Carrinho</li>
-                    </ul>
-                </div>
+                <p><a href=""><img src="src/img/zeedog-logo.png" alt="zee dog logo" class="mobile-logo"></a></p>
+                <div id="menu-btn" class=""></div>
             </div>
-        </nav>
-
+            </nav>
+            <ul id="menu-list" style="display: none">
+                        <li class="mob-item"><a href="#">Cachorros</a></li>
+                        <li class="mob-item"><a href="#">Gatos</a></li>
+                        <li class="mob-item"><a href="#">Pessoas</a></li>
+                        <li class="mob-item"><a href="#">Lookbook</a></li>
+                        <li class="mob-item"><a href="#">Quem Somos</a></li>
+                        <li class="mob-item"><a href="#">Onde Encontrar</a></li>
+                        <li class="mob-item"><a href="#">Meu Perfil</a></li>
+                        <li class="mob-item"><a href="#">Meu Carrinho</a></li>
+                    </ul>
             <div class="destaque">
                 <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
             </div>
@@ -73,12 +68,13 @@
                 <p><img src="src/icon/search.svg" alt="search icon"></p>
             </div>
         </div>
+        <!-- MOBILE FIM -->
     </header>
 <!-- ABOUT -->
-    <div id="about" class="container">
+    <div id="about" >
         <h2>Ivan e Bono surfdog</h2>
         <img src="src/img/about-ivan_e_bono.jpg" alt="ivan e bono surfando">
-        <p>Na verdade antes de começarmos a surfar, eu comecei a remar com o Bono em Búzios. Eu havia comprado uma prancha de SUP (Stand Up Paddle) pra aprender a remar com o Bono, como um bom labrador, veio nadando atrás. Coloquei ele em cima da prancha e percebi que dava pra remar com ele junto. A primeira onda veio alguns meses depois na praia do Rosa em Florianópolis. Eu estava remando com o Bono em direção ao Rosa Norte e percebi que colado as pedras havia umas "marolinhas" quebrando. Consegui entrar em uma delas e fui reto em direção a praia. Me senti assim, num estado de extrema euforia. Não é que dava pra surfar com o Bono?</p>
+        <p class="container">Na verdade antes de começarmos a surfar, eu comecei a remar com o Bono em Búzios. Eu havia comprado uma prancha de SUP (Stand Up Paddle) pra aprender a remar com o Bono, como um bom labrador, veio nadando atrás. Coloquei ele em cima da prancha e percebi que dava pra remar com ele junto. A primeira onda veio alguns meses depois na praia do Rosa em Florianópolis. Eu estava remando com o Bono em direção ao Rosa Norte e percebi que colado as pedras havia umas "marolinhas" quebrando. Consegui entrar em uma delas e fui reto em direção a praia. Me senti assim, num estado de extrema euforia. Não é que dava pra surfar com o Bono?</p>
     </div>
 <!-- BEST-OF -->
     <div id="best-of">
@@ -162,11 +158,23 @@
             </a>
         </section>
     </div>
-<script>
-    function mobileMenu() {
-        document.getElementById("menu-btn").classList("open");
-    }
 
+<script src="src/js/jquery-2.1.1.min.js"></script>
+<script>
+    $(window).load(function() {
+        $("#menu-btn").on("click", function() {
+            var c = document.getElementById("menu-list");
+            if(c.style.display == "none") {
+                $(this).addClass("menu-active");
+                c.style.display = "flex";
+            } else {
+                $(this).removeClass("menu-active");
+                c.style.display = "none";
+            }
+        })
+
+
+    })
 </script>
 <!--
     Lightbox created by: Lokesh Dhakar
