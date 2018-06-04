@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 body {
@@ -378,9 +380,19 @@ input {
     margin-bottom: var(--marBotBig);
 }
 
+.galeria a {
+    position: relative;
+    overflow: hidden;
+}
+
 .gallery-img {
     display: inline-block;
     width: 160px;
+    transition: all 500ms ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
 }
 .gallery-sm {display: none;}
 
